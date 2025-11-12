@@ -9,7 +9,7 @@ body,
 html {
   min-height: 100vh;
   max-height: 100vh;
-  
+  overflow-x: hidden;
 }
 
 
