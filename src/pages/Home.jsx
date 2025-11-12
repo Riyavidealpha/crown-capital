@@ -9,9 +9,9 @@ export const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="min-w-screen min-h-[calc(100vh-100px)] px-6 
-                bg-linear-to-r from-[#232652] to-[#B89043]
-                flex items-center justify-center overflow-y-auto ">
+           <div className="min-w-screen min-h-screen overflow-x-hidden
+                sccrollbar-hide
+                   overflow-y-auto  ">
 
                 <Outlet />
 
