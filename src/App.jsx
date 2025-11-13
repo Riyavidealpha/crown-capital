@@ -6,6 +6,11 @@ import { HomeBanner } from './components/HomeBanner';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Platform } from './pages/Platform';
+import { ForeignExchange } from './pages/ForeignExchange';
+import { Metals } from './pages/Metals';
+import { Shares } from './pages/Shares';
+import { Indices } from './pages/Indices';
+import { Commodities } from './pages/Commodities';
 function App() {
 
 
@@ -18,10 +23,14 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/platform' element={<Platform />} />
-
-
+            <Route path="/foreignExchange" element={<ForeignExchange />} />
+            <Route path="/metals" element={<Metals />} />
+            <Route path="/shares" element={<Shares />} />
+            <Route path="/indices" element={<Indices />} />
+            <Route path="/commodities" element={<Commodities />} />
 
           </Route>
+
         </Routes>
       </BrowserRouter>
 

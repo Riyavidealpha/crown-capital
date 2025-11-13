@@ -13,9 +13,14 @@ export const Navbar = () => {
         nav('/')
     }
 
+    const handleSignup = () => {
+
+        window.location.href = 'https://register.crowncapital.top'
+    }
+
 
     return (
-        <nav className="fixed top-0 left-0 w-full h-24 bg-linear-to-r from-[#242640] to-[#232652] flex items-center px-8 shadow-2xl z-50">
+        <nav className="sticky top-0 left-0 w-full h-24 bg-linear-to-r from-[#242640] to-[#232652] flex items-center px-8 shadow-2xl z-50">
             <div className="w-full flex items-center justify-between relative">
 
 
@@ -36,14 +41,13 @@ export const Navbar = () => {
                         <button className="hover:text-[#B89043] flex items-center gap-1">
                             Trading <span>▾</span>
                         </button>
-                        <div
-                            className="absolute left-0 top-full hidden group-hover:block bg-[#1f2035] shadow-lg rounded-lg py-3 w-44 mt-1"
-                        >
-                            <a href="#" className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Foreign Exchange</a>
-                            <a href="#" className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Metals</a>
-                            <a href="#" className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Shares</a>
-                            <a href="#" className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Indices</a>
-                            <a href="#" className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Commodities</a>
+                        <div className="absolute left-0 top-full hidden group-hover:block bg-[#1f2035] shadow-lg rounded-lg py-3 w-44 -mt-1">
+
+                            <Link to={'/foreignExchange'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Foreign Exchange</Link>
+                            <Link to={'/metals'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Metals</Link>
+                            <Link to={'/shares'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Shares</Link>
+                            <Link to={'/indices'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Indices</Link>
+                            <Link to={'/commodities'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Commodities</Link>
                         </div>
                     </li>
 
@@ -56,7 +60,7 @@ export const Navbar = () => {
                     <button
                         type="button"
                         className="text-black bg-yellow-400 hover:bg-amber-500  focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5"
-                    >
+                        onClick={handleSignup} >
                         Signup
                     </button>
 
@@ -84,10 +88,11 @@ export const Navbar = () => {
                             </button>
                             {tradeOpen && (
                                 <ul className="mt-2 space-y-2">
-                                    <li><a href="#" className="block text-white hover:text-[#B89043]">Forex</a></li>
-                                    <li><a href="#" className="block text-white hover:text-[#B89043]">Commodities</a></li>
-                                    <li><a href="#" className="block text-white hover:text-[#B89043]">Indices</a></li>
-                                    <li><a href="#" className="block text-white hover:text-[#B89043]">Cryptos</a></li>
+                                    <Link to={'/foreignExchange'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Foreign Exchange</Link>
+                                    <Link to={'/metals'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Metals</Link>
+                                    <Link to={'/shares'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Shares</Link>
+                                    <Link to={'/indices'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Indices</Link>
+                                    <Link to={'/commodities'} className="block px-4 py-2 text-white hover:bg-[#B89043]/20">Commodities</Link>
                                 </ul>
                             )}
                         </li>

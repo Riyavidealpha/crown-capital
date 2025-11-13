@@ -17,9 +17,9 @@ export const Home = () => {
 
             </div>
             <Footer />
-            <div class="fixed bottom-0 left-0 w-full bg-[#B89043] text-white py-2 overflow-hidden z-50">
-                <div class="whitespace-nowrap animate-marquee">
-                    <p class="inline-block text-sm font-medium tracking-wide px-4">
+            <div className="fixed bottom-0 left-0 w-full bg-[#B89043] text-white py-0.3 overflow-hidden z-50">
+                <div className=" whitespace-nowrap animate-marquee">
+                    <p className="inline-block text-sm font-medium tracking-wide px-2">
                         Trading CFDs involves substantial risk, invest only what you can afford to lose.
                     </p>
                 </div>

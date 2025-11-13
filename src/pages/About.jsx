@@ -1,4 +1,5 @@
 import company_overview from "../assets/images/img/company_overview.png";
+import { CTA } from "../components/Risk";
 export const About = () => {
     return (
         <>
@@ -105,7 +106,7 @@ export const About = () => {
 
             </div>
 
-
+            <CTA />
 
         </>
     )

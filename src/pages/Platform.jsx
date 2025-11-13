@@ -1,36 +1,50 @@
-import about from "../assets/images/img/market3.png";
+import about from "../assets/images/platform.png";
+import security from "../assets/images/svgs/security.svg";
+import platform from "../assets/images/svgs/platforms.svg";
+import competition from "../assets/images/svgs/competition.svg";
+import globe from "../assets/images/svgs/globe.svg";
+import background from "../assets/images/img/trading.png"
+import { ShootingStarsAndStarsBackgroundDemo } from "../components/ShootingStars";
+import { CTA } from "../components/Risk";
+
 export const Platform = () => {
     return (
         <>
 
 
-            <div className="flex   items-center mt-12 flex-col w-full  ">
+            <div className="flex   items-center  flex-col w-full  " >
 
+                <section className="w-full    py-10  " >
+                    <ShootingStarsAndStarsBackgroundDemo />
+                </section>
 
-                <section className="w-full  mx-auto  px-20   md:px-20 lg:px-40 py-20  text-white">
+                <section className="w-full  mx-auto  px-18  mb-8  md:px-20 lg:px-20 py-12  ">
                     <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="flex justify-center pt-5 lg:justify-start">
+                        <div className="flex justify-center pt-5 lg:justify-center">
                             <img src={about} alt="Company Overview" loading="lazy" width="600" height="500" decoding="async" data-nimg="1"
                                 className="rounded-xl shadow-lg object-contain" />
                         </div>
                         <div className="space-y-6 text-black">
-                            <h2 className="text-3xl md:text-4xl text-yellow-400 font-bold mb-4">Company Overview</h2>
-                            <p className="text-base md:text-lg leading-relaxed text-justify">At <strong>Crown Capital</strong>, we are redefining online CFD trading by combining technology, transparency, and trust. Our platform provides traders with seamless access to global financial markets, covering Foreign Exchange Pairs, metals, shares, indices, and commodities.</p>
-                            <p className=" leading-relaxed text-base md:text-lg text-justify">With competitive spreads, lightning-fast execution, and world-class support, Crown Capital empowers traders of all levels — from beginners to professionals — to seize opportunities and trade with confidence.</p>
-                            <p className=" text-base md:text-lg font-medium">We don't just connect clients to markets — we help them compete with confidence.</p>
+                            <h2 className="text-3xl md:text-4xl text-yellow-400 font-bold mb-4">Introduction to Platform</h2>
+                            <p className="text-base md:text-lg leading-relaxed text-justify">At <strong>Crown Capital</strong>, we believe trading should be seamless, intuitive, and accessible—no matter where you are. That’s why we provide powerful, secure, and user-friendly platforms designed for every type of trader. Whether you prefer trading from your desktop, on the go with your mobile, or managing your clients and accounts through an integrated CRM, we have you covered.</p>
                         </div>
 
                     </div>
                 </section>
 
 
+                <section className=" bg-gray-900  w-full py-20">
+                    <h2 className="text-center text-3xl lg:text-5xl pb-10 font-bold text-yellow-400 mb-2">Crown Capital Platforms</h2>
+                    <div className="flex justify-center">
+                        <p className="text-white text-center text-md font-medium mb-12 max-w-5xl px-4">
+                            Crown Capital offers powerful, intuitive trading platforms designed for every trader’s lifestyle. Access markets seamlessly through the <strong className="font-bold text-yellow-400">Web Trading Platform</strong> — a browser-based solution for fast, secure, and insightful trading — or stay connected anywhere with <strong className="font-bold text-yellow-400">Mobile Trading </strong> on Android and iOS, featuring real-time alerts, synchronized data, and effortless navigation.
+                        </p>
+                    </div>
 
-
-                <section className=" bg-gray-900 w-full py-20">
                     <div className=" container  mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12">
 
 
-                        <div className=" bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                        <div className=" bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
                             <h3 className="text-3xl font-bold text-gray-900 mb-3">Web Trading Platform</h3>
                             <p className="text-yellow-600 text-sm font-medium mb-2">Trade smarter, directly from your browser.</p>
                             <p className="text-gray-700 mb-6">
@@ -63,7 +77,7 @@ export const Platform = () => {
                         </div>
 
 
-                        <div className="platform bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                        <div className="platform bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
                             <h3 className="text-3xl font-bold text-gray-900 mb-3">Mobile Trading</h3>
                             <p className="text-yellow-600 text-sm font-medium mb-2">Trade on the move, never miss an opportunity.</p>
                             <p className="text-gray-700 mb-6">
@@ -98,9 +112,34 @@ export const Platform = () => {
                     </div>
                 </section>
 
+                <section className="py-20">
+                    <h2 className="text-center text-3xl lg:text-5xl pb-10 font-bold text-yellow-400 mb-4">
+                        Why Crown Capital Platforms?
+                    </h2>
 
+
+
+                    <div className=" mx-auto  justify-center gap-12 grid lg:grid-cols-4">
+                        {[
+                            { img: security, title: "Foreign Exchange", text: "All-in-one access: Web, Mobile, and CRM." },
+                            { img: platform, title: "Shares", text: "Seamless synchronization across devices" },
+                            { img: competition, title: "Indices", text: "Enterprise-grade security & compliance." },
+                            { img: globe, title: "Metals", text: "Designed for traders, brokers & partners alike" },
+
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white bg-opacity-10 backdrop-blur-md p-8 rounded-2xl shadow-xl 
+            text-center hover:scale-105 transition-all border border-gray-100 border-t-4 border-t-[#202577] border-solid duration-300 
+            w-full max-w-xs h-full flex flex-col justify-between">
+                                <img src={item.img} className="w-14 mx-auto mb-4" />
+
+                                <p className="text-black mt-2 mb-4">{item.text}</p>
+
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
-
+<CTA/>
 
 
         </>

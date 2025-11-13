@@ -1,4 +1,5 @@
-import contact from "../assets/images/img/market3.png"
+import contact from "../assets/images/conatct.jpg"
+import { CTA } from "../components/Risk"
 
 export const Contact = () => {
     return (
@@ -156,6 +157,7 @@ export const Contact = () => {
 
 
             </div>
+            <CTA/>
         </>
     )
 }

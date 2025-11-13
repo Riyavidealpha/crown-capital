@@ -1,5 +1,5 @@
-import homeBanner from "../assets/images/banner.png"
-import about from "../assets/images/homeBanner.png";
+import homeBanner from "../assets/images/homepage.png"
+import contact from "../assets/images/cta.jpg";
 import home1 from "../assets/images/img/home1.png";
 import home2 from "../assets/images/img/home2.png";
 import home3 from "../assets/images/img/home3.png";
@@ -11,6 +11,7 @@ import indices from "../assets/images/svgs/indices.svg";
 import metals from "../assets/images/svgs/metals.svg";
 import wheat from "../assets/images/svgs/wheat.svg"
 import { BsCheckCircle } from "react-icons/bs";
+import { CTA } from "./Risk";
 export const HomeBanner = () => {
     return (
         <>
@@ -117,7 +118,7 @@ export const HomeBanner = () => {
                             { img: metals, title: "Metals", text: "Trade gold, silver, and platinum with high-liquidity conditions." },
                             { img: wheat, title: "Commodities", text: "Diversify with energies, agriculture, and raw materials." }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white/30 backdrop-blur p-6 rounded-xl text-center max-w-xs w-full">
+                            <div key={i} className="bg-white/30 backdrop-blur p-6 rounded-xl hover:scale-105 transition-all duration-300 text-center max-w-xs w-full">
                                 <img src={item.img} className="w-14 mx-auto mb-4" />
                                 <h3 className="text-yellow-400 text-2xl font-bold">{item.title}</h3>
                                 <p className="text-black mt-2 mb-4">{item.text}</p>
@@ -154,23 +155,38 @@ export const HomeBanner = () => {
 
 
                 <section className="py-20 flex flex-col lg:flex-row items-center gap-10 max-w-7xl mx-auto px-6">
-                    <div className="flex-1">
-                        <h2 className="text-3xl lg:text-5xl font-bold text-yellow-400 mb-5">
-                            Your Trading Future Begins Here
-                        </h2>
+                    <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
 
-                        <p className="text-white leading-relaxed mb-6">
-                            At <strong>Crown Capital</strong>, we combine cutting-edge platforms, institutional-grade pricing,
-                            and transparent execution to give you an edge in global markets.
-                        </p>
 
-                        <button className="bg-yellow-400 hover:bg-yellow-300 px-6 py-3 rounded-full text-black font-semibold transition">
-                            Start Trading
-                        </button>
-                    </div>
+                        <div className="flex-1">
+                            <img
+                                src={contact}
+                                alt="Trading Illustration"
+                                className="w-full rounded-2xl shadow-md"
+                            />
+                        </div>
 
-                    <div className="flex-1">
-                        <img src={about} className="w-full rounded-xl shadow-lg" />
+
+                        <div className="flex-1 text-center lg:text-left">
+                            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-5">
+                                Start Your <span className="text-yellow-400">Trading Journey</span> Today
+                            </h2>
+
+                            <p className="text-white text-lg leading-relaxed mb-8">
+                                Experience institutional-grade trading with transparent pricing, deep
+                                liquidity, and advanced risk management — built for both beginners and
+                                professionals.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row lg:justify-start justify-center gap-8">
+                                <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-md font-semibold transition duration-300 shadow-sm">
+                                    Start Trading
+                                </button>
+                                <button className="border border-yellow-400 text-black hover:bg-[#faf6f0] px-8 py-3 rounded-md font-semibold transition duration-300">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
